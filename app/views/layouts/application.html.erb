@@ -39,8 +39,10 @@
 	        		</li>
 	        		<li class="divider-vertical"></li>
 
-	        		<%= link_to 'New Pic', new_pic_path, :class => 'btn btn-warning btn-large icon-camera icon-white' %>
-				</form>
+	        		<%= link_to new_pic_path, :class => 'btn btn-warning' do %>
+						<i class="icon-camera"></i>
+	        			New Pic
+	        		<% end %>
 	        	</ul>
 	        	
 		      </div>
