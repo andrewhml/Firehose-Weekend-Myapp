@@ -38,11 +38,21 @@
 		        		<% end %>
 	        		</li>
 	        		<li class="divider-vertical"></li>
-
+	        		<% if current_user.blank? %>
+	        			<%= link_to new_user_registration_path, :class => 'btn btn-warning' do %>
+	        			<i class="icon-user"></i>
+	        			Sign Up
+	        			<% end %>
+	        			<li>
+	        			<%= link_to('Login', new_user_session_path) %>
+	        			</li>
+        			<% else %>
+        				<%= link_to('Log Out', destroy_user_session_path, class: "btn btn-warning", :method => :delete) %>
+	        		<% end %>
 	        		<%= link_to new_pic_path, :class => 'btn btn-warning' do %>
 						<i class="icon-camera"></i>
 	        			New Pic
-	        		<% end %>
+        			<% end %>
 	        	</ul>
 	        	
 		      </div>
