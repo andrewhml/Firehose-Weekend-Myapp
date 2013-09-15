@@ -19,8 +19,8 @@
 		      </a>
 		 
 		      <!-- Be sure to leave the brand out there if you want it shown -->
-		      <a class="brand" href="/">Firehose Weekend</a>
-		 
+		      <%= link_to('Firehose Wknd', root_path, :class => 'brand') %>
+
 		      <!-- Everything you want hidden at 940px or less, place within here -->
 		      <div class="nav-collapse collapse">
 		        <!-- .nav, .navbar-search, .navbar-form, etc -->
@@ -31,12 +31,15 @@
 	        		</li>
 	        		<li class="divider-vertical"></li>
 	        		<li>
-	        			<%= link_to('New Pic', '/pics/new') %>
-
+		        		<%= link_to pics_path do %>
+		        			View All Pics
+		        			<span class="badge badge-inverse"><%= Pic.all.count %></span>
+		        			
+		        		<% end %>
+	        		</li>
 	        		<li class="divider-vertical"></li>
 
-	        		<form class="navbar-search">
-  					<input type="text" class="search-query" placeholder="Search">
+	        		<%= link_to 'New Pic', new_pic_path, :class => 'btn btn-warning btn-large icon-camera icon-white' %>
 				</form>
 	        	</ul>
 	        	

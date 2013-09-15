@@ -1,15 +1,17 @@
-<div class="hero-unit">
-	<h1>new picture</h1>
+<div class="row-fluid boxy text-center">
+	<div class="span4 offset4">
+	<h1>Upload a New Picture</h1>
+	</div>
 
 </div>
 <div class="row-fluid">
-	<div class="boxy span4 offset4">
+	<div class="formbox span4 offset4">
 	<%= simple_form_for @pic do |f| %>
-			<%= f.input :hour %>
-			<%= f.input :emotion %>
-			<%= f.input :learned %>
+			<%= f.input :hour, placeholder: "When did this go down?" %>
+			<%= f.input :emotion, placeholder: "How did you feel?" %>
+			<%= f.input :learned, placeholder: "What were you doing?" %>
 
-			<%= submit_tag nil, :class => 'btn btn-primary btn-large' %>
+			<%= submit_tag nil, :class => 'btn btn-success btn-large' %>
 
 		<% end %>
 	</div>
