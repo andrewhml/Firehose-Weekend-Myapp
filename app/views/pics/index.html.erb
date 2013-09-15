@@ -1,20 +1,22 @@
-<div class="row-fluid span9 offset1">
+<div class="row-fluid span12">
   	<h1>All Your Pics Are Belong To Us!</h1>
-	<% @pics.each do |pic| %>
-		<div class="span3">
-			<div class="boxy">
-				<h3>Hour: <%= pic.hour %>
-				</h3>
-				<%= image_tag pic.image %>
-				<h5>Emotion:
-					<p></p>
-				<%= pic.emotion %>
-				</h5> 
-				<h5>Learned: 
-					<p></p>
-				<%= pic.learned %>
-				</h5>
-			</div>
-		</div>
-	<% end %>
 </div>
+
+<% @pics.each_slice(3) do|a| %>
+	<div class="row-fluid">
+		<ul class="thumbnails">
+			<% a.each do |f| %>
+				<li class="span4">
+    				<div class="thumbnail">
+	      				<%= image_tag f.image %>
+	      				<div class="thumbnail-caption">
+	      					<h3>Hour: <%= f.hour %></h3>
+	      					<p>Emotion: <%= f.emotion %></p>
+	      					<p>Learned: <%= f.learned %></p>
+	      				</div>
+      				</div>
+      			</li>
+  			<% end %>
+  		</ul>
+  	</div>
+<% end %>
