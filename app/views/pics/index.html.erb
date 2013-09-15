@@ -1,29 +1,20 @@
-<div class="container-fluid">
-  	<div class="row-fluid">
-	    <div class="span2 container-white">
-	      <!--Sidebar content-->
-	      <%= link_to 'New Pic', new_pic_path, :class => 'btn btn-success btn-large'%>
-	    </div>
-	    <div class="span10">
-	      	<!--Body content-->
-	      	<h1>Here are your entries!</h1>
-			<% @pics.each do |pic| %>
-				<div class="span3">
-					<div class="boxy">
-						<h3>Hour: <%= pic.hour %>
-						</h3>
-						<p />
-						<h5>Emotion:
-							<p></p>
-						<%= pic.emotion %>
-						</h5> 
-						<p />
-						<h5>Learned: <%= pic.learned %>
-						</h5>
-						<p />
-					</div>
-				</div>
-			<% end %>
+<div class="row-fluid span9 offset1">
+  	<h1>All Your Pics Are Belong To Us!</h1>
+	<% @pics.each do |pic| %>
+		<div class="span3">
+			<div class="boxy">
+				<h3>Hour: <%= pic.hour %>
+				</h3>
+				<%= image_tag pic.image %>
+				<h5>Emotion:
+					<p></p>
+				<%= pic.emotion %>
+				</h5> 
+				<h5>Learned: 
+					<p></p>
+				<%= pic.learned %>
+				</h5>
+			</div>
 		</div>
-	</div>
+	<% end %>
 </div>

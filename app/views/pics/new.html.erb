@@ -7,11 +7,14 @@
 <div class="row-fluid">
 	<div class="formbox span4 offset4">
 	<%= simple_form_for @pic do |f| %>
+			<div class="control-group">
 			<%= f.input :hour, placeholder: "When did this go down?" %>
+			<%= f.input :image, :as => :file, placeholder: "Upload your pic."%>
 			<%= f.input :emotion, placeholder: "How did you feel?" %>
 			<%= f.input :learned, placeholder: "What were you doing?" %>
 
 			<%= submit_tag nil, :class => 'btn btn-large btn-block' %>
+			</div>
 
 		<% end %>
 	</div>
