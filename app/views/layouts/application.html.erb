@@ -19,18 +19,27 @@
 		      </a>
 		 
 		      <!-- Be sure to leave the brand out there if you want it shown -->
-		      <a class="brand" href="#">Firehose Weekend</a>
+		      <a class="brand" href="/">Firehose Weekend</a>
 		 
 		      <!-- Everything you want hidden at 940px or less, place within here -->
 		      <div class="nav-collapse collapse">
 		        <!-- .nav, .navbar-search, .navbar-form, etc -->
-	        	<ul class="nav">
+	        	<ul class="nav pull-right">
+	        		<li class="divider-vertical"></li>
 	        		<li>
-	        			<%= Time.now %>
+	        			<%= link_to('Git Project', 'https://github.com/andrewhml/Firehose-Weekend-Myapp') %>
 	        		</li>
+	        		<li class="divider-vertical"></li>
 	        		<li>
-	        			<%= link_to('Myapp', '#') %>
+	        			<%= link_to('New Pic', '/pics/new') %>
+
+	        		<li class="divider-vertical"></li>
+
+	        		<form class="navbar-search">
+  					<input type="text" class="search-query" placeholder="Search">
+				</form>
 	        	</ul>
+	        	
 		      </div>
 		 
 			</div>

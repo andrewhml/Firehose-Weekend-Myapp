@@ -1,12 +1,16 @@
 <div class="hero-unit">
 	<h1>new picture</h1>
 
+</div>
+<div class="row-fluid">
+	<div class="boxy span4 offset4">
 	<%= simple_form_for @pic do |f| %>
-		<%= f.input :hour %>
-		<%= f.input :emotion %>
-		<%= f.input :learned %>
+			<%= f.input :hour %>
+			<%= f.input :emotion %>
+			<%= f.input :learned %>
 
-		<%= submit_tag %>
+			<%= submit_tag nil, :class => 'btn btn-primary btn-large' %>
 
-	<% end %>
+		<% end %>
+	</div>
 </div>

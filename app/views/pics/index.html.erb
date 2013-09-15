@@ -1,0 +1,18 @@
+
+<h1>Here are your entries!</h1>
+
+<div class="hero-unit">
+	<% @pics.each do |pic| %>
+	<p />
+		Hour: <%= pic.hour %>
+		<p />
+		Emotion: <%= pic.emotion %>
+		<p />
+		Learned: <%= pic.learned %>
+		<p />
+	<% end %>
+	<br />
+</div>
+
+<%= link_to 'New Pic', new_pic_path, :class => 'btn'%>
+

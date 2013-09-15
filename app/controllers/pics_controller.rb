@@ -4,10 +4,14 @@ class PicsController < ApplicationController
 		@pic = Pic.new
 	end
 
-	def index
+	def create
+		@pics = Pic.create(params[:pic]) 
+		redirect_to pics_path
+
 	end
 
-	def create
+	def index
+		@pics = Pic.all
 	end
 
 	def show
